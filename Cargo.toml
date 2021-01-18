@@ -1,10 +1,17 @@
 [package]
-name = "Bloctonum"
+name = "blockchain-in-rust"
 version = "0.1.0"
-authors = ["KevDev0247 <donkevin1980s@gmail.com>"]
+authors = ["Jacob <jacob@geeklaunch.net>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "blockchainlib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "blockchain"
+path = "src/main.rs"
 
 [dependencies]
 hex = "0.3.2"
+crypto-hash = "0.3.3"
