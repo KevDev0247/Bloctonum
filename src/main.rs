@@ -1,11 +1,13 @@
 use blockchainlib::*;
 
 fn main() {
-    let block = Block::new(0, 0, vec![0; 32], 0, "Genesis".to_owned());
+    let mut block = Block::new(0, 0, vec![0; 32], 0, "Bloconum Block".to_owned());
 
     println!("{:?}", &block);
 
     let hash = block.hash();
-
     println!("{:?}", &hash);
+
+    block.hash = hash;
+    println!("{:?}", &block);
 }
